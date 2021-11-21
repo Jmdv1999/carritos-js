@@ -141,3 +141,8 @@ button{
 .fijado{
     position: fixed;
 }
+@media screen and (max-width:700px) {
+    .card{
+        width: 40%;
+    }
+}
