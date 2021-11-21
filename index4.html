@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="icono.min.css">
+    <link rel="stylesheet" href="tienda-lateral.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Carrito de Compras </h2>
+        <div id="objetos">
+
+        </div>
+        <div id="total">
+            <h3>Carrito Vacio</h3>
+            <h4>Comience a comprar</h4>
+        </div>
+    </div>
+    <div class="contenido">
+        <i class="icono-cart menu-bar" onclick="abrir();"></i>
+        <div id="cards"></div>
+    </div>
+    <template id="template-objeto">
+        <div class="objeto">
+            <h3 id="producto">Producto</h3>
+            <p><button id="menos" class="restar"> - </button> <span id="canti">Cantidad</span> <button id="mas" class="sumar"> + </button></p>
+            <h4>Total: $<span id="precio">450</span></h4>
+        </div>
+    </template>
+    <template id="template-total">
+            <h3>Total productos: <span id="total-productos">2</span></h3>
+            <h4>Total: $<span id="total-precio">450</span></h4>
+            <button id="vaciar-carrito">Vaciar Todo</button>
+    </template>
+    <template id="template-card">
+        <div class="card">
+            <img src="" alt="imagen">
+            <div class="cuerpo-card">
+                <h3>Titulo</h3>
+                <p>Precio</p>
+                <button class="boton-compar">Comprar</button>
+            </div>
+        </div>
+    </template>
+    <script>
+        function abrir(){
+            const contenedor = document.querySelector('.contenido')
+            const sidebar = document.querySelector('.sidebar')
+            if(contenedor.classList.contains('abrir')===false){
+                contenedor.classList.add('abrir');
+                sidebar.classList.add('fijado')
+            }
+            else{
+                contenedor.classList.remove('abrir');
+                sidebar.classList.remove('fijado');
+            }
+        }
+    </script>
+    <script src="app4.js"></script>
+</body>
+</html>

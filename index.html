@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-left:25px !important;">
+        <h1 class="text-white .navbar-brand">Carrito</h1>
+    </nav>
+    <div class="container">
+        <div class="row" id="cards"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito Vacio -- Comience a compar</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-2 mt-4" >
+            <div class="card" style="border-radius: 5px;">
+                <img src="" alt="" class="card-img-top">
+                <div class="card-body" style="padding:25px 15px;">
+                    <h3>Titulo</h3>
+                    <p>Precio</p>
+                    <button class="btn btn-dark">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="template-footer"> 
+        <th scope="row" colspan="2">Total Productos</th>
+        <td>10</td>
+        <td> 
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar Todo</button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+
+    
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">ID</th>
+            <td>Café</td>
+            <td>1</td>
+            <td>
+                <button class="btn btn-danger btn-sm"> - </button>
+                <button class="btn btn-primary btn-sm"> + </button>
+            </td>
+            <td>$ <span>500</span></td>
+        </tr>
+    </template>
+    <script src="app.js"></script>
+</body>
+</html>

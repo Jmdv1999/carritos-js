@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+button{
+    cursor: pointer;
+    color:#Fff;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.sidebar{
+    width: 250px; 
+    height: 100vh;
+    position: absolute;
+    background: #333;
+    color:#fff;
+    outline: 1px solid #2a2a2a;
+    transition: all .3s;
+    overflow-y: scroll;
+}
+.sidebar h2{
+    text-align: center;
+    padding:10px;
+    background: #2a2a2a;
+}
+/*
+.sidebar ul{
+    list-style: none;
+}
+.sidebar li{
+    outline: 1px solid #2a2a2a;
+    transition: all .3s;
+}
+.sidebar li:hover{
+    background: #444;
+    border-left: 5px solid #eee;
+}
+.sidebar a{
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px;
+}*/
+.sidebar .objeto{
+    height: 100px;
+    width: 100%;
+    padding: 15px;
+}
+.sidebar .objeto p button{
+    margin-top: 10px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+.sidebar .objeto h4{
+    margin-top: 5px;
+    float: right;
+}
+#menos{
+    background: crimson;
+}
+#mas{
+    background: #0d6efd;
+}
+.sidebar #total{
+    height: 130px;
+    width: 100%;
+    padding: 15px;
+    background: #2a2a2a;
+    border-top: 2px solid #7c7c7c;
+}
+.sidebar #total button{
+    background: crimson;
+    margin-top: 15px;
+    float: right;
+}
+.contenido{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: #eee;
+    padding: 30px;
+    transition: all .3s;
+}
+#cards{
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 20%;
+}
+.card img{
+    width: 100%;
+    display: block;
+}
+.cuerpo-card{
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    padding:25px 15px;
+}
+.cuerpo-card h3{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.cuerpo-card p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.cuerpo-card button{
+    margin-top: 10px;
+    background: #0d6efd;
+}
+.menu-bar{
+    cursor: pointer;
+    position:fixed;
+    top: 15px; 
+}
+.abrir{
+    transform:translateX(250px);
+}
+.fijado{
+    position: fixed;
+}
